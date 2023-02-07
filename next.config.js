@@ -1,12 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  compiler: {
-    styledComponents: true,
-  },
   experimental: {
     appDir: true,
   },
-};
+  compiler: (() => {
+    let compilerConfig = {
+      styledComponents: true,
+    }
 
-module.exports = nextConfig;
+    if (process.env.NODE_ENV === "production") {
+      compilerConfig = {
+        ...compilerConfig,
+        reactRemoveProperties: { properties: ["^data-testid$"] },
+      }
+    }
+    return compilerConfig
+  })(),
+}
+
+module.exports = nextConfig
