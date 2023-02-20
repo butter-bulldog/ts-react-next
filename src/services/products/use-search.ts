@@ -1,5 +1,5 @@
-import useSWR from 'swr'
-import type { ApiContext, Category, Condition, Product } from 'types'
+import useSWR from "swr"
+import type { ApiContext, Category, Condition, Product } from "types"
 
 export type UseSearchProps = {
   /**
@@ -17,11 +17,11 @@ export type UseSearchProps = {
   /**
    * ソートするキー
    */
-  sort?: keyof Omit<Product, 'owner'>
+  sort?: keyof Omit<Product, "owner">
   /**
    * 昇順or降順
    */
-  order?: 'asc' | 'desc'
+  order?: "asc" | "desc"
   /**
    * 初期状態
    */
@@ -56,22 +56,25 @@ const useSearch = (
     userId,
     conditions,
     initial,
-    sort = 'id',
-    order = 'desc',
-  }: UseSearchProps = {},
+    sort = "id",
+    order = "desc",
+  }: UseSearchProps = {}
 ): UseSearch => {
-  const path = `${context.apiRootUrl.replace(/\/$/g, '')}/products`
+  const path = `${context.apiRootUrl.replace(/\/$/g, "")}/products`
   const params = new URLSearchParams()
 
-  category && params.append('category', category)
-  userId && params.append('owner.id', `${userId}`)
+  // パラメータを設定
+  category && params.append("category", category)
+  userId && params.append("owner.id", `${userId}`)
   conditions &&
-    conditions.forEach((condition) => params.append('condition', condition))
-  sort && params.append('_sort', sort)
-  order && params.append('_order', order)
+    conditions.forEach((condition) => params.append("condition", condition))
+  sort && params.append("_sort", sort)
+  order && params.append("_order", order)
+
+  // パラメータからURLクエリに
   const query = params.toString()
   const { data, error } = useSWR<Product[]>(
-    query.length > 0 ? `${path}?${query}` : path,
+    query.length > 0 ? `${path}?${query}` : path
   )
 
   return {
