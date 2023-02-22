@@ -1,6 +1,6 @@
-import Button from "components/atoms/Button"
-import {useShoppingCartContext} from 'contexts/ShoppingCartContext'
-import type {Product} from 'types'
+import Button from 'components/atoms/Button'
+import { useShoppingCartContext } from 'contexts/ShoppingCartContext'
+import type { Product } from 'types'
 
 interface AddToCartButtonContainerProps {
   product: Product
@@ -14,7 +14,7 @@ const AddToCartButtonContainer = ({
   product,
   onAddToCartButtonClick,
 }: AddToCartButtonContainerProps) => {
-  const {cart, addProductToCart} = useShoppingCartContext()
+  const { cart, addProductToCart } = useShoppingCartContext()
 
   const handleAddToCartButtonClick = () => {
     const productId = Number(product.id)
@@ -25,19 +25,17 @@ const AddToCartButtonContainer = ({
     }
 
     onAddToCartButtonClick && onAddToCartButtonClick(product)
-
   }
 
   return (
     <Button
-      width={{base: '100%', md: '400px'}}
+      width={{ base: '100%', md: '400px' }}
       height="66px"
       onClick={handleAddToCartButtonClick}
     >
       カートに追加
     </Button>
   )
-
 }
 
 export default AddToCartButtonContainer

@@ -1,52 +1,52 @@
-import {ComponentMeta, ComponentStory} from '@storybook/react'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 import TextArea from './index'
 
 export default {
   title: 'Atoms/TextArea',
   argTypes: {
     placeholder: {
-      control: {type: 'text'},
+      control: { type: 'text' },
       description: 'プレースホルダー',
       table: {
-        type: {summary: 'string'},
+        type: { summary: 'string' },
       },
     },
     rows: {
-      control: {type: 'number'},
+      control: { type: 'number' },
       defaultValue: 5,
       description: '行数',
       table: {
-        type: {summary: 'number'},
+        type: { summary: 'number' },
       },
     },
     minRows: {
-      control: {type: 'number'},
+      control: { type: 'number' },
       defaultValue: 5,
       description: '最小行数',
       table: {
-        type: {summary: 'number'},
+        type: { summary: 'number' },
       },
     },
     maxRows: {
-      control: {type: 'number'},
+      control: { type: 'number' },
       defaultValue: 10,
       descriptin: '最大行数',
       table: {
-        type: {summary: 'number'},
+        type: { summary: 'number' },
       },
     },
     hasError: {
-      control: {type: 'boolean'},
+      control: { type: 'boolean' },
       defaultValue: false,
       description: 'バリデーションエラー',
       table: {
-        type: {summary: 'boolean'},
+        type: { summary: 'boolean' },
       },
     },
     onChange: {
       description: 'onChangeイベントハンドラ',
       table: {
-        type: {summary: 'function'},
+        type: { summary: 'function' },
       },
     },
   },
@@ -60,4 +60,4 @@ export const Normal = Template.bind({})
 
 export const Error = Template.bind({})
 
-Error.args = {hasError: true}
+Error.args = { hasError: true }

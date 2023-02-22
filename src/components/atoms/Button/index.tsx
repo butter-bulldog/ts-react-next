@@ -139,7 +139,8 @@ const Button = styled.button<ButtonProps>`
   ${(props) => toPropValue('letter-spacing', props.letterSpacing, props.theme)}
   ${(props) => toPropValue('line-height', props.lineHeight, props.theme)}
   ${(props) => toPropValue('color', props.color, props.theme)}
-  ${(props) => toPropValue('background-color', props.backgroundColor, props.theme)}
+  ${(props) =>
+    toPropValue('background-color', props.backgroundColor, props.theme)}
   ${(props) => toPropValue('width', props.width, props.theme)}
   ${(props) => toPropValue('height', props.height, props.theme)}
   ${(props) => toPropValue('min-width', props.minWidth, props.theme)}

@@ -1,4 +1,4 @@
-import {ComponentMeta, ComponentStory} from '@storybook/react'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 import Button from './index'
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -7,48 +7,48 @@ export default {
   argTypes: {
     variant: {
       options: ['primary', 'secondary'],
-      control: {type: 'radio'},
+      control: { type: 'radio' },
       defaultValue: 'primary',
       description: 'ボタンバリアント',
       table: {
-        type: {sumary: 'primary | secondary'},
-        defaultValue: {summary: 'parimary'},
+        type: { sumary: 'primary | secondary' },
+        defaultValue: { summary: 'parimary' },
       },
     },
     children: {
-      control: {type: 'text'},
+      control: { type: 'text' },
       defaultValue: 'Button',
       description: 'ボタンテキスト',
       table: {
-        type: {summary: 'string'},
+        type: { summary: 'string' },
       },
     },
     disabled: {
-      control: {type: 'boolean'},
+      control: { type: 'boolean' },
       defaultValue: false,
       description: 'Disabledフラグ',
       table: {
-        type: {summary: 'boolean'},
-      }
+        type: { summary: 'boolean' },
+      },
     },
     width: {
-      control: {type: 'number'},
+      control: { type: 'number' },
       description: '横幅',
       table: {
-        type: {summary: 'number'},
+        type: { summary: 'number' },
       },
     },
     height: {
-      control: {type: 'number'},
+      control: { type: 'number' },
       description: '縦幅',
       table: {
-        type: {summary: 'number'},
+        type: { summary: 'number' },
       },
     },
     onClick: {
       description: 'onClickイベントハンドラ',
       table: {
-        type: {summary: 'funtion'},
+        type: { summary: 'funtion' },
       },
     },
   },
@@ -58,12 +58,12 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
 
 // プライマリボタン
 export const Primary = Template.bind({})
-Primary.args = {variant: 'primary', children: 'Primary Button'}
+Primary.args = { variant: 'primary', children: 'Primary Button' }
 
 // セカンダリボタン
 export const Secondary = Template.bind({})
-Secondary.args = {variant: 'secondary', children: 'Secondary Button'}
+Secondary.args = { variant: 'secondary', children: 'Secondary Button' }
 
 // 無効化ボタン
 export const Disabled = Template.bind({})
-Disabled.args = {disabled: true, children: 'Disabled Button'}
+Disabled.args = { disabled: true, children: 'Disabled Button' }

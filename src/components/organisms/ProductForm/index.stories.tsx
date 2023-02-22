@@ -1,4 +1,4 @@
-import { ComponentMeta, ComponentStory} from '@storybook/react'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 import ProductForm from './index'
 
 export default {
@@ -7,7 +7,7 @@ export default {
     onProductSave: {
       description: '出品ボタンを押した時のイベントハンドラ',
       table: {
-        type: {summary: 'function'},
+        type: { summary: 'function' },
       },
     },
   },

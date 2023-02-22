@@ -1,8 +1,9 @@
 import { restElement } from '@babel/types'
-import React, {useCallback, useState} from 'react'
+import React, { useCallback, useState } from 'react'
 import styled from 'styled-components'
 
-export interface TextAreaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+export interface TextAreaProps
+  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   /**
    * 最小行数
    */
@@ -22,10 +23,11 @@ export interface TextAreaProps extends React.TextareaHTMLAttributes<HTMLTextArea
 /**
  * スタイルを適用
  */
-const StyledTextArea = styled.textarea<{hasError?: boolean}>`
-  color: ${({theme}) => theme.colors.inputText};
+const StyledTextArea = styled.textarea<{ hasError?: boolean }>`
+  color: ${({ theme }) => theme.colors.inputText};
   border: 1px solid
-    ${({theme, hasError}) => hasError ? theme.colors.danger : theme.colors.border};
+    ${({ theme, hasError }) =>
+      hasError ? theme.colors.danger : theme.colors.border};
   border-radius: 5px;
   box-sizing: border-box;
   outline: none;
@@ -38,7 +40,7 @@ const StyledTextArea = styled.textarea<{hasError?: boolean}>`
   height: auto;
 
   &::placeholder {
-    color: ${({theme}) => theme.colors.placeholder};
+    color: ${({ theme }) => theme.colors.placeholder};
   }
 `
 
@@ -56,7 +58,7 @@ const TextArea = (props: TextAreaProps) => {
     ...rest
   } = props
 
-  const {textareaRows, setTextareaRows} = useState(Math.min(rows, minRows))
+  const { textareaRows, setTextareaRows } = useState(Math.min(rows, minRows))
 
   console.assert(
     !(rows < minRows),
@@ -108,4 +110,3 @@ TextArea.defaultProps = {
 }
 
 export default TextArea
-

@@ -1,15 +1,15 @@
-import { Product } from "types"
+import { Product } from 'types'
 
-export const ADD_PRODUCT = "ADD_PRODUCT"
-export const REMOVE_PRODUCT = "REMOVE_PRODUCT"
+export const ADD_PRODUCT = 'ADD_PRODUCT'
+export const REMOVE_PRODUCT = 'REMOVE_PRODUCT'
 
 type ShopReducerAction =
   | {
-      type: "ADD_PRODUCT"
+      type: 'ADD_PRODUCT'
       payload: Product
     }
   | {
-      type: "REMOVE_PRODUCT"
+      type: 'REMOVE_PRODUCT'
       payload: number
     }
 
@@ -45,7 +45,7 @@ const removeProductFromCart = (productId: number, state: Product[]) => {
  */
 export const shopReducer: React.Reducer<Product[], ShopReducerAction> = (
   state: Product[],
-  action: ShopReducerAction
+  action: ShopReducerAction,
 ) => {
   switch (action.type) {
     case ADD_PRODUCT:

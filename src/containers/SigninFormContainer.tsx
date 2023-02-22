@@ -1,6 +1,6 @@
 import SigninForm from 'components/organisms/SigninForm'
-import {useAuthContext} from 'contexts/AuthContext'
-import {useGlobalSpinnerActionsContext} from 'contexts/GlobalSpinnerContext'
+import { useAuthContext } from 'contexts/AuthContext'
+import { useGlobalSpinnerActionsContext } from 'contexts/GlobalSpinnerContext'
 
 interface SigninFormContainerProps {
   onSignin: (error?: Error) => void
@@ -9,10 +9,8 @@ interface SigninFormContainerProps {
 /**
  * サインインフォームコンテナ
  */
-const SigninFormContainer = ({
-  onSignin,
-}: SigninFormContainerProps) => {
-  const {signin} = useAuthContext()
+const SigninFormContainer = ({ onSignin }: SigninFormContainerProps) => {
+  const { signin } = useAuthContext()
   const setGlobalSpinner = useGlobalSpinnerActionsContext()
 
   // サインインボタンを押された時のイベントハンドラ

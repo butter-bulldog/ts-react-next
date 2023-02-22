@@ -1,4 +1,4 @@
-import {ComponentMeta, ComponentStory} from '@storybook/react'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 import SigninForm from './index'
 
 export default {
@@ -7,7 +7,7 @@ export default {
     onSignin: {
       description: 'サインインボタンを押した時のイベントハンドラ',
       table: {
-        type: {summary: 'function'},
+        type: { summary: 'function' },
       },
     },
   },

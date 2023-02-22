@@ -1,4 +1,4 @@
-import {useForm} from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import Button from 'components/atoms/Button'
 import Input from 'components/atoms/Input'
 import Text from 'components/atoms/Text'
@@ -13,15 +13,15 @@ interface SigninFormProps {
   onSignin?: (username: string, password: string) => void
 }
 
-const SigninForm = ({onSignin}: SigninFormProps) => {
+const SigninForm = ({ onSignin }: SigninFormProps) => {
   const {
     register,
     handleSubmit,
-    formState: {errors},
+    formState: { errors },
   } = useForm<SigninFormData>()
-  
+
   const onSubmit = (data: SigninFormData) => {
-    const {username, password} = data
+    const { username, password } = data
     onSignin && onSignin(username, password)
   }
 
@@ -29,7 +29,7 @@ const SigninForm = ({onSignin}: SigninFormProps) => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <Box marginBottom={1}>
         <Input
-          {...register('username', {required: true})}
+          {...register('username', { required: true })}
           name="username"
           type="text"
           placeholder="ユーザ名"
@@ -43,7 +43,7 @@ const SigninForm = ({onSignin}: SigninFormProps) => {
       </Box>
       <Box marginBottom={2}>
         <Input
-          {...register('password', {required: true})}
+          {...register('password', { required: true })}
           name="password"
           type="password"
           placeholder="パスワード"

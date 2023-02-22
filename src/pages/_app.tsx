@@ -1,6 +1,6 @@
-import {AppProps} from 'next/app'
+import { AppProps } from 'next/app'
 import Head from 'next/head'
-import {createGlobalStyle} from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 html,
@@ -28,8 +28,7 @@ ol, ul {
 }
 `
 
-
-const MyApp = ({Component, pageProps}: AppProps) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>

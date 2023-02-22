@@ -121,7 +121,8 @@ const ProductCard = ({
             height={imgSize ?? 240}
             containerWidth={size}
             containerHeight={size}
-            objectFit="cover" alt={''}
+            objectFit="cover"
+            alt={''}
           />
         )}
       </ProductCardImageContainer>

@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 import Box, { BoxProps } from 'components/layout/Box'
-import type { CSSPropertyGridArea, CSSPropertyGridAutoFlow, CSSPropertyGridColumn, CSSPropertyGridRow, Responsive } from 'types/styles'
+import type {
+  CSSPropertyGridArea,
+  CSSPropertyGridAutoFlow,
+  CSSPropertyGridColumn,
+  CSSPropertyGridRow,
+  Responsive,
+} from 'types/styles'
 import { toPropValue } from 'utils/styles'
 
 type GridProps = BoxProps & {
@@ -29,11 +35,19 @@ const Grid = styled(Box)<GridProps>`
   ${(props) => toPropValue('grid-row', props.gridRow, props.theme)}
   ${(props) => toPropValue('grid-column', props.gridColumn, props.theme)}
   ${(props) => toPropValue('grid-auto-flow', props.gridAutoFlow, props.theme)}
-  ${(props) => toPropValue('grid-auto-columns', props.gridAutoColumns, props.theme)}
+  ${(props) =>
+    toPropValue('grid-auto-columns', props.gridAutoColumns, props.theme)}
   ${(props) => toPropValue('grid-auto-rows', props.gridAutoRows, props.theme)}
-  ${(props) => toPropValue('grid-template-columns', props.gridTemplateColumns, props.theme)}
-  ${(props) => toPropValue('grid-template-rows', props.gridTemplateRows, props.theme)}
-  ${(props) => toPropValue('grid-template-areas', props.gridTemplateAreas, props.theme)}
+  ${(props) =>
+    toPropValue(
+      'grid-template-columns',
+      props.gridTemplateColumns,
+      props.theme,
+    )}
+  ${(props) =>
+    toPropValue('grid-template-rows', props.gridTemplateRows, props.theme)}
+  ${(props) =>
+    toPropValue('grid-template-areas', props.gridTemplateAreas, props.theme)}
   ${(props) => toPropValue('grid-area', props.gridArea, props.theme)}
 `
 

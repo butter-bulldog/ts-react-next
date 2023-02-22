@@ -1,5 +1,5 @@
-import type {NextPage} from 'next'
-import {useRouter} from 'next/router'
+import type { NextPage } from 'next'
+import { useRouter } from 'next/router'
 import AppLogo from 'components/atoms/AppLogo'
 import Box from 'components/layout/Box'
 import Flex from 'components/layout/Flex'
@@ -24,8 +24,8 @@ const SigninPage: NextPage = () => {
       <Flex
         paddingTop={2}
         paddingBottom={2}
-        paddingLeft={{base: 2, md: 0}}
-        paddingRight={{base: 2, md: 0}}
+        paddingLeft={{ base: 2, md: 0 }}
+        paddingRight={{ base: 2, md: 0 }}
         justifyContent="center"
       >
         <Flex

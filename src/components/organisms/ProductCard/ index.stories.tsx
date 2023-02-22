@@ -1,45 +1,45 @@
-import {ComponentMeta, ComponentStory} from '@storybook/react'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 import ProductCard from './index'
 
 export default {
   title: 'Organisms/ProductCard',
   argTypes: {
     title: {
-      control: {type: 'text'},
+      control: { type: 'text' },
       description: '商品名',
       table: {
-        type: {summary: 'string'},
+        type: { summary: 'string' },
       },
     },
     price: {
-      control: {type: 'number'},
+      control: { type: 'number' },
       description: '商品価格',
       table: {
-        type: {summary: 'number'},
+        type: { summary: 'number' },
       },
     },
     imageUrl: {
-      control: {type: 'text'},
+      control: { type: 'text' },
       description: '商品画像URL',
       table: {
-        type: {summary: 'string'},
+        type: { summary: 'string' },
       },
     },
     blurDataUrl: {
-      control: {type: 'text'},
+      control: { type: 'text' },
       description: '商品のぼかし画像のデータURIスキーム',
       table: {
-        type: {summary: 'string'},
+        type: { summary: 'string' },
       },
     },
     variant: {
       options: ['listing', 'small', 'detail'],
-      control: {type: 'radio'},
+      control: { type: 'radio' },
       defaultValue: 'listing',
       description: 'バリアント(表示スタイル)',
       table: {
-        type: {summary: 'liting | small | detail'},
-        defaultValue: {summary: 'primary'},
+        type: { summary: 'liting | small | detail' },
+        defaultValue: { summary: 'primary' },
       },
     },
   },
