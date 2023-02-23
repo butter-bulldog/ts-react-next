@@ -63,15 +63,12 @@ const useSearch = (
   const path = `${context.apiRootUrl.replace(/\/$/g, '')}/products`
   const params = new URLSearchParams()
 
-  // パラメータを設定
   category && params.append('category', category)
   userId && params.append('owner.id', `${userId}`)
   conditions &&
     conditions.forEach((condition) => params.append('condition', condition))
   sort && params.append('_sort', sort)
   order && params.append('_order', order)
-
-  // パラメータからURLクエリに
   const query = params.toString()
   const { data, error } = useSWR<Product[]>(
     query.length > 0 ? `${path}?${query}` : path,

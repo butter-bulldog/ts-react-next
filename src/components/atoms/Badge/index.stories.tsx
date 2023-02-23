@@ -23,8 +23,8 @@ export default {
 
 const Template: ComponentStory<typeof Badge> = (args) => <Badge {...args} />
 
-export const Orage = Template.bind({})
-Orage.args = { content: '1', backgroundColor: '#ed9f28' }
+export const Orange = Template.bind({})
+Orange.args = { content: '1', backgroundColor: '#ed9f28' }
 
 export const Green = Template.bind({})
 Green.args = { content: '2', backgroundColor: '#32bf00' }

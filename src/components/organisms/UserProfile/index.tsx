@@ -36,7 +36,7 @@ const UserProfile = ({
   numberOfProducts,
   description,
 }: UserProfileProps) => {
-  const profileImageSize = variant === 'small' ? '100' : '120'
+  const profileImageSize = variant === 'small' ? '100px' : '120px'
 
   return (
     <Flex>

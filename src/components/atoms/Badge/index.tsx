@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+// バッジの円形
 const BadgeWrapper = styled.div<{ backgroundColor: string }>`
   border-radius: 20px;
   height: 20px;
@@ -10,6 +11,7 @@ const BadgeWrapper = styled.div<{ backgroundColor: string }>`
   background-color: ${({ backgroundColor }) => backgroundColor};
 `
 
+// バッジ内のテキスト
 const BadgeText = styled.p`
   color: white;
   font-size: 11px;
@@ -17,10 +19,19 @@ const BadgeText = styled.p`
 `
 
 interface BadgeProps {
+  /**
+   * バッジのテキスト
+   */
   content: string
+  /**
+   * バッジの色
+   */
   backgroundColor: string
 }
 
+/**
+ * バッジ
+ */
 const Badge = ({ content, backgroundColor }: BadgeProps) => {
   return (
     <BadgeWrapper backgroundColor={backgroundColor}>

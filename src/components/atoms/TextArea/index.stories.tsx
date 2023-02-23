@@ -30,7 +30,7 @@ export default {
     maxRows: {
       control: { type: 'number' },
       defaultValue: 10,
-      descriptin: '最大行数',
+      description: '最大行数',
       table: {
         type: { summary: 'number' },
       },
@@ -38,7 +38,7 @@ export default {
     hasError: {
       control: { type: 'boolean' },
       defaultValue: false,
-      description: 'バリデーションエラー',
+      description: 'バリデーションエラーフラグ',
       table: {
         type: { summary: 'boolean' },
       },
@@ -59,5 +59,4 @@ const Template: ComponentStory<typeof TextArea> = (args) => (
 export const Normal = Template.bind({})
 
 export const Error = Template.bind({})
-
 Error.args = { hasError: true }

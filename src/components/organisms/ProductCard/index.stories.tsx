@@ -36,9 +36,9 @@ export default {
       options: ['listing', 'small', 'detail'],
       control: { type: 'radio' },
       defaultValue: 'listing',
-      description: 'バリアント(表示スタイル)',
+      description: 'バリアント（表示スタイル）',
       table: {
-        type: { summary: 'liting | small | detail' },
+        type: { summary: 'listing | small | detail' },
         defaultValue: { summary: 'primary' },
       },
     },
@@ -49,6 +49,7 @@ const Template: ComponentStory<typeof ProductCard> = (args) => (
   <ProductCard {...args} />
 )
 
+// Listingカード
 export const Listing = Template.bind({})
 Listing.args = {
   variant: 'listing',
@@ -57,6 +58,7 @@ Listing.args = {
   price: 2000,
 }
 
+// Smallカード
 export const Small = Template.bind({})
 Small.args = {
   variant: 'small',
@@ -65,9 +67,11 @@ Small.args = {
   price: 2000,
 }
 
+// Detailカード
 export const Detail = Template.bind({})
 Detail.args = {
   variant: 'detail',
+  title: 'ナイスシューズ',
   imageUrl: '/images/sample/1.jpg',
   price: 2000,
 }

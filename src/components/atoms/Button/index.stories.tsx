@@ -1,7 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import Button from './index'
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   title: 'Atoms/Button',
   argTypes: {
@@ -9,10 +8,11 @@ export default {
       options: ['primary', 'secondary'],
       control: { type: 'radio' },
       defaultValue: 'primary',
+      // docsに表示する内容を設定
       description: 'ボタンバリアント',
       table: {
-        type: { sumary: 'primary | secondary' },
-        defaultValue: { summary: 'parimary' },
+        type: { summary: 'primary | secondary' },
+        defaultValue: { summary: 'primary' },
       },
     },
     children: {
@@ -33,14 +33,14 @@ export default {
     },
     width: {
       control: { type: 'number' },
-      description: '横幅',
+      description: 'ボタンの横幅',
       table: {
         type: { summary: 'number' },
       },
     },
     height: {
       control: { type: 'number' },
-      description: '縦幅',
+      description: 'ボタンの縦幅',
       table: {
         type: { summary: 'number' },
       },
@@ -48,7 +48,7 @@ export default {
     onClick: {
       description: 'onClickイベントハンドラ',
       table: {
-        type: { summary: 'funtion' },
+        type: { summary: 'function' },
       },
     },
   },
@@ -56,14 +56,14 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
 
-// プライマリボタン
+// Primaryボタン
 export const Primary = Template.bind({})
 Primary.args = { variant: 'primary', children: 'Primary Button' }
 
-// セカンダリボタン
+// Secondaryボタン
 export const Secondary = Template.bind({})
 Secondary.args = { variant: 'secondary', children: 'Secondary Button' }
 
-// 無効化ボタン
+// Disabledボタン
 export const Disabled = Template.bind({})
 Disabled.args = { disabled: true, children: 'Disabled Button' }
