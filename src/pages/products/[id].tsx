@@ -67,17 +67,17 @@ const ProductPage: NextPage<ProductPageProps> = ({
           <Breadcrumb>
             <BreadcrumbItem>
               <Link href="/">
-                <a>トップ</a>
+                トップ
               </Link>
             </BreadcrumbItem>
             <BreadcrumbItem>
               <Link href="/search">
-                <a>検索</a>
+                検索
               </Link>
             </BreadcrumbItem>
             <BreadcrumbItem>
               <Link href={`/search/${product.category}`}>
-                <a>{categoryNameDict[product.category as Category]}</a>
+                {categoryNameDict[product.category as Category]}
               </Link>
             </BreadcrumbItem>
             <BreadcrumbItem>{product.title}</BreadcrumbItem>
@@ -96,7 +96,6 @@ const ProductPage: NextPage<ProductPageProps> = ({
               出品者
             </Text>
             <Link href={`/users/${product.owner.id}`}>
-              <a>
                 {/* ユーザープロファイル */}
                 <UserProfile
                   variant="small"
@@ -104,7 +103,6 @@ const ProductPage: NextPage<ProductPageProps> = ({
                   profileImageUrl={product.owner.profileImageUrl}
                   numberOfProducts={100}
                 />
-              </a>
             </Link>
           </Box>
         </Box>

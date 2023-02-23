@@ -51,7 +51,6 @@ const ProductCardListContainer = ({
         products.map((p) => (
           <Box key={p.id}>
             <Link href={`/products/${p.id}`} passHref>
-              <a>
                 {/* 商品カード */}
                 <ProductCard
                   variant="listing"
@@ -60,7 +59,6 @@ const ProductCardListContainer = ({
                   imageUrl={p.imageUrl}
                   blurDataUrl={p.blurDataUrl}
                 />
-              </a>
             </Link>
           </Box>
         ))}
