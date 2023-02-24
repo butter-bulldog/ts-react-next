@@ -57,6 +57,7 @@ const CartProduct = ({
       <Flex>
         <Box width="120px" height="120px">
           <Link href={`/products/${id}`} passHref>
+            <a>
               <Image
                 quality="85"
                 src={imageUrl}
@@ -65,6 +66,7 @@ const CartProduct = ({
                 width={120}
                 objectFit="cover"
               />
+            </a>
           </Link>
         </Box>
         <Box padding={1}>

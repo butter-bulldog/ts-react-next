@@ -76,7 +76,7 @@ const Footer = () => {
         </Box>
       </Flex>
       <Box paddingTop={3} paddingBottom={2}>
-        <Text>© 2021 hoge, Ltd.. All rights reserved.</Text>
+        <Text>© 2023 hoge Co., Ltd.. All rights reserved.</Text>
       </Box>
     </footer>
   )

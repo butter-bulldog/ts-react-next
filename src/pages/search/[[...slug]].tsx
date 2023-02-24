@@ -70,19 +70,19 @@ const SearchPage: NextPage = () => {
           <Breadcrumb>
             <BreadcrumbItem>
               <Link href="/">
-                トップ
+                <a>トップ</a>
               </Link>
             </BreadcrumbItem>
             <BreadcrumbItem>
               <Link href="/search">
-                検索
+                <a>検索</a>
               </Link>
             </BreadcrumbItem>
             {/* パンくずリストを選択したカテゴリから生成 */}
             {slug.slice(0, slug.length - 1).map((category, i) => (
               <BreadcrumbItem key={i}>
                 <Link href={`/search/${slug.slice(0, i + 1).join('/')}`}>
-                  {categoryNameDict[category] ?? 'Unknown'}
+                  <a>{categoryNameDict[category] ?? 'Unknown'}</a>
                 </Link>
               </BreadcrumbItem>
             ))}
