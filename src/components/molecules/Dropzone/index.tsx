@@ -216,12 +216,12 @@ const Dropzone = (props: DropzoneProps) => {
         hasError={hasError}
         width={width}
         height={height}
-        data-testid="dropzone"
+        data-testid='dropzone'
       >
         {/* ダミーインプット */}
         <DropzoneInputFile
           ref={inputRef}
-          type="file"
+          type='file'
           name={name}
           accept={acceptedFileTypes.join(',')}
           onChange={handleChange}

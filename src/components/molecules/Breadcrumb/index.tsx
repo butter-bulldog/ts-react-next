@@ -15,7 +15,7 @@ interface BreadcrumbProps {
  * パンくずリスト
  */
 const Breadcrumb = ({ children }: BreadcrumbProps) => {
-  return <BreadcrumbRoot as="ol">{children}</BreadcrumbRoot>
+  return <BreadcrumbRoot as='ol'>{children}</BreadcrumbRoot>
 }
 
 export default Breadcrumb

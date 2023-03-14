@@ -85,8 +85,8 @@ const DropdownItem = (props: DropdownItemProps) => {
   const { item } = props
 
   return (
-    <Flex alignItems="center">
-      <Text margin={0} variant="small">
+    <Flex alignItems='center'>
+      <Text margin={0} variant='small'>
         {item.label ?? item.value}
       </Text>
     </Flex>
@@ -188,7 +188,7 @@ const Dropdown = (props: DropdownProps) => {
         hasError={hasError}
         onMouseDown={handleMouseDown}
         onTouchEnd={handleMouseDown}
-        data-testid="dropdown-control"
+        data-testid='dropdown-control'
       >
         {selectedItem && (
           <DropdownValue>
@@ -201,7 +201,7 @@ const Dropdown = (props: DropdownProps) => {
         )}
         {/* ダミーinput */}
         <input
-          type="hidden"
+          type='hidden'
           name={name}
           value={selectedItem?.value ?? ''}
           onChange={() => onChange && onChange(selectedItem)}
@@ -216,7 +216,7 @@ const Dropdown = (props: DropdownProps) => {
               key={idx}
               onMouseDown={(e) => handleSelectValue(e, item)}
               onClick={(e) => handleSelectValue(e, item)}
-              data-testid="dropdown-option"
+              data-testid='dropdown-option'
             >
               <DropdownItem item={item} />
             </DropdownOption>

@@ -35,7 +35,7 @@ const BadgeIconButton = ({
     <BadgeIconButtonWrapper size={size}>
       {icon}
       {badgeContent && (
-        <BadgeWrapper data-testid="badge-wrapper">
+        <BadgeWrapper data-testid='badge-wrapper'>
           <Badge
             content={`${badgeContent}`}
             backgroundColor={badgeBackgroundColor}

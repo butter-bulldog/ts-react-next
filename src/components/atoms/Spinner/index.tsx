@@ -59,11 +59,11 @@ const Spinner = (props: SpinnerProps) => {
       viewBox={`0 0 ${size} ${size}`}
     >
       <circle
-        className="path"
+        className='path'
         cx={size / 2}
         cy={size / 2}
         r={size / 2 - strokeWidth / 2}
-        fill="none"
+        fill='none'
         strokeWidth={strokeWidth}
       />
     </StyledSpinner>

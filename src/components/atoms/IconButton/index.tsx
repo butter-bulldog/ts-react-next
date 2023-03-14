@@ -65,8 +65,8 @@ function withIconStyle(
       <IconWrapper cursor={cursor} size={size} {...rest}>
         <Icon
           className={className}
-          fontSize="inherit"
-          color="inherit"
+          fontSize='inherit'
+          color='inherit'
           onClick={onClick}
         />
       </IconWrapper>

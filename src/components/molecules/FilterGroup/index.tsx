@@ -47,7 +47,7 @@ const FilterGroup = ({
 
   return (
     <>
-      <Text fontWeight="bold" variant="mediumLarge">
+      <Text fontWeight='bold' variant='mediumLarge'>
         {title}
       </Text>
       <Box marginTop={2}>

@@ -38,13 +38,13 @@ const SigninForm = ({ onSignin }: SigninFormProps) => {
         {/* サインインユーザー名の入力 */}
         <Input
           {...register('username', { required: true })}
-          name="username"
-          type="text"
-          placeholder="ユーザ名"
+          name='username'
+          type='text'
+          placeholder='ユーザ名'
           hasError={!!errors.username}
         />
         {errors.username && (
-          <Text color="danger" variant="small" paddingLeft={1}>
+          <Text color='danger' variant='small' paddingLeft={1}>
             ユーザ名は必須です
           </Text>
         )}
@@ -53,18 +53,18 @@ const SigninForm = ({ onSignin }: SigninFormProps) => {
         {/* サインインパスワードの入力 */}
         <Input
           {...register('password', { required: true })}
-          name="password"
-          type="password"
-          placeholder="パスワード"
+          name='password'
+          type='password'
+          placeholder='パスワード'
           hasError={!!errors.password}
         />
         {errors.password && (
-          <Text color="danger" variant="small" paddingLeft={1}>
+          <Text color='danger' variant='small' paddingLeft={1}>
             パスワードは必須です
           </Text>
         )}
       </Box>
-      <Button width="100%" type="submit">
+      <Button width='100%' type='submit'>
         サインイン
       </Button>
     </form>

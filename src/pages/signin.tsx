@@ -27,18 +27,18 @@ const SigninPage: NextPage = () => {
         paddingBottom={2}
         paddingLeft={{ base: 2, md: 0 }}
         paddingRight={{ base: 2, md: 0 }}
-        justifyContent="center"
+        justifyContent='center'
       >
         <Flex
-          width="400px"
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
+          width='400px'
+          flexDirection='column'
+          justifyContent='center'
+          alignItems='center'
         >
           <Box marginBottom={2}>
             <AppLogo />
           </Box>
-          <Box width="100%">
+          <Box width='100%'>
             {/*
               サインインフォームコンテナ
               SigninFormのユーザー名・パスワードから認証APIを呼び出し、

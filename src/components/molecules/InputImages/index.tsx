@@ -90,7 +90,7 @@ const InputImages = (props: InputImagesProps) => {
   )
 
   return (
-    <InputImagesContainer flexDirection="column">
+    <InputImagesContainer flexDirection='column'>
       {images &&
         images.map((img, index) => {
           return (

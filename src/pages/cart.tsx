@@ -20,19 +20,19 @@ const CartPage: NextPage = () => {
         paddingBottom={2}
         paddingLeft={{ base: 2, md: 0 }}
         paddingRight={{ base: 2, md: 0 }}
-        justifyContent="center"
+        justifyContent='center'
       >
-        <Box width="1240px">
+        <Box width='1240px'>
           <Breadcrumb>
             <BreadcrumbItem>
-              <Link href="/">
+              <Link href='/'>
                 <a>トップ</a>
               </Link>
             </BreadcrumbItem>
             <BreadcrumbItem>カート</BreadcrumbItem>
           </Breadcrumb>
           <Box>
-            <Text display="block" variant="large" as="h1">
+            <Text display='block' variant='large' as='h1'>
               カート
             </Text>
             {/*

@@ -41,7 +41,7 @@ const UserProductCardListContainer = ({
             <a>
               {/* 商品カード */}
               <ProductCard
-                variant="small"
+                variant='small'
                 title={p.title}
                 price={p.price}
                 imageUrl={p.imageUrl}

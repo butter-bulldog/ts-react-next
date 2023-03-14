@@ -52,12 +52,12 @@ const CheckBox = (props: CheckBoxProps) => {
       <CheckBoxElement
         {...rest}
         ref={ref}
-        type="checkbox"
+        type='checkbox'
         checked={isChecked}
         readOnly={!onChange}
         onChange={onChange}
       />
-      <Flex alignItems="center">
+      <Flex alignItems='center'>
         {/* チェックボックスのON/OFFの描画 */}
         {checked ?? isChecked ? (
           <CheckBoxIcon size={20} onClick={onClick} />

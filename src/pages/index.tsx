@@ -25,7 +25,7 @@ const HomePage: NextPage<HomePageProps> = ({
             <Link href={`/products/${p.id}`} passHref>
               <a>
                 <ProductCard
-                  variant="small"
+                  variant='small'
                   title={p.title}
                   price={p.price}
                   imageUrl={p.imageUrl}
@@ -41,45 +41,45 @@ const HomePage: NextPage<HomePageProps> = ({
 
   return (
     <Layout>
-      <Flex padding={2} justifyContent="center" backgroundColor="primary">
+      <Flex padding={2} justifyContent='center' backgroundColor='primary'>
         <Flex
           width={{ base: '100%', md: '1040px' }}
-          justifyContent="space-between"
-          alignItems="center"
+          justifyContent='space-between'
+          alignItems='center'
           flexDirection={{ base: 'column', md: 'row' }}
         >
-          <Box width="100%">
-            <Text as="h1" marginTop={0} color="white" variant="extraLarge">
+          <Box width='100%'>
+            <Text as='h1' marginTop={0} color='white' variant='extraLarge'>
               お気に入りのアイテムを見つけよう
             </Text>
           </Box>
-          <Box width="100%">
-            <Text as="p" color="white" variant="mediumLarge">
+          <Box width='100%'>
+            <Text as='p' color='white' variant='mediumLarge'>
               このアプリはTypeScript/Next.jsで作成されており、バックエンドのモックAPIはjson-serverが使用されています。
             </Text>
           </Box>
         </Flex>
       </Flex>
-      <Flex paddingBottom={2} justifyContent="center">
+      <Flex paddingBottom={2} justifyContent='center'>
         <Box
           paddingLeft={{ base: 2, md: 0 }}
           paddingRight={{ base: 2, md: 0 }}
           width={{ base: '100%', md: '1040px' }}
         >
           <Box marginBottom={3}>
-            <Text as="h2" variant="large">
+            <Text as='h2' variant='large'>
               トップス
             </Text>
             {renderProductCardCarousel(clothesProducts)}
           </Box>
           <Box marginBottom={3}>
-            <Text as="h2" variant="large">
+            <Text as='h2' variant='large'>
               本
             </Text>
             {renderProductCardCarousel(bookProducts)}
           </Box>
           <Box>
-            <Text as="h2" variant="large">
+            <Text as='h2' variant='large'>
               シューズ
             </Text>
             {renderProductCardCarousel(shoesProducts)}

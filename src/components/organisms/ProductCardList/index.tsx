@@ -21,7 +21,7 @@ const ProductCardList = ({
 }: React.PropsWithChildren<ProductCardListProps>) => {
   return (
     <Grid
-      gridGap="16px"
+      gridGap='16px'
       gridTemplateColumns={{
         base: `repeat(${numberPerRowForMobile}, 1fr)`,
         md: `repeat(${numberPerRow}, 1fr)`,

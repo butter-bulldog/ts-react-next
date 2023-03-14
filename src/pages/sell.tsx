@@ -35,18 +35,18 @@ const SellPage: NextPage = () => {
         }}
         paddingLeft={{ base: 2, md: 0 }}
         paddingRight={{ base: 2, md: 0 }}
-        justifyContent="center"
+        justifyContent='center'
       >
         <Flex
-          width="800px"
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
+          width='800px'
+          flexDirection='column'
+          justifyContent='center'
+          alignItems='center'
         >
           <Box display={{ base: 'none', md: 'block' }} marginBottom={2}>
             <AppLogo />
           </Box>
-          <Box width="100%">
+          <Box width='100%'>
             {/*
               商品投稿フォームコンテナ
               商品情報を入力し、プロダクトAPIを通じて商品を保存

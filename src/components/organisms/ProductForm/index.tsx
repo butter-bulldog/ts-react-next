@@ -43,14 +43,14 @@ const ProductForm = ({ onProductSave }: ProductFormProps) => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <Box marginBottom={3}>
         <Box marginBottom={2}>
-          <Text as="label" variant="mediumLarge" fontWeight="bold">
+          <Text as='label' variant='mediumLarge' fontWeight='bold'>
             商品の写真
           </Text>
         </Box>
         {/* 商品画像の入力 */}
         <Controller
           control={control}
-          name="image"
+          name='image'
           rules={{ required: true }}
           render={({ field: { onChange, value }, fieldState: { error } }) => (
             <InputImages
@@ -62,7 +62,7 @@ const ProductForm = ({ onProductSave }: ProductFormProps) => {
           )}
         />
         {errors.image && (
-          <Text color="danger" variant="small" paddingLeft={1}>
+          <Text color='danger' variant='small' paddingLeft={1}>
             Product image is required
           </Text>
         )}
@@ -70,40 +70,40 @@ const ProductForm = ({ onProductSave }: ProductFormProps) => {
 
       <Box marginBottom={3}>
         <Box marginBottom={2}>
-          <Text as="label" variant="mediumLarge" fontWeight="bold">
+          <Text as='label' variant='mediumLarge' fontWeight='bold'>
             商品情報
           </Text>
         </Box>
         <Box marginBottom={1}>
-          <Text as="label" variant="medium">
+          <Text as='label' variant='medium'>
             タイトル
           </Text>
           {/* 商品タイトルの入力 */}
           <Input
             {...register('title', { required: true })}
-            name="title"
-            type="text"
-            placeholder="商品のタイトル"
+            name='title'
+            type='text'
+            placeholder='商品のタイトル'
             hasError={!!errors.title}
           />
           {errors.title && (
-            <Text color="danger" variant="small" paddingLeft={1}>
+            <Text color='danger' variant='small' paddingLeft={1}>
               タイトルの入力は必須です
             </Text>
           )}
         </Box>
         <Box marginBottom={1}>
-          <Text as="label" variant="medium">
+          <Text as='label' variant='medium'>
             概要
           </Text>
           {/* 商品概要の入力 */}
           <Controller
             control={control}
-            name="description"
+            name='description'
             rules={{ required: true }}
             render={({ field: { onChange, value }, fieldState: { error } }) => (
               <TextArea
-                placeholder="最高の商品です！"
+                placeholder='最高の商品です！'
                 hasError={!!error}
                 onChange={onChange}
               >
@@ -112,21 +112,21 @@ const ProductForm = ({ onProductSave }: ProductFormProps) => {
             )}
           />
           {errors.description && (
-            <Text color="danger" variant="small" paddingLeft={1}>
+            <Text color='danger' variant='small' paddingLeft={1}>
               概要の入力は必須です
             </Text>
           )}
         </Box>
         <Box marginBottom={1}>
-          <Text as="label" variant="medium">
+          <Text as='label' variant='medium'>
             カテゴリ
           </Text>
           {/* カテゴリのドロップダウン */}
           <Controller
             control={control}
-            name="category"
+            name='category'
             rules={{ required: true }}
-            defaultValue="shoes"
+            defaultValue='shoes'
             render={({ field: { onChange, value }, fieldState: { error } }) => (
               <Dropdown
                 options={[
@@ -136,27 +136,27 @@ const ProductForm = ({ onProductSave }: ProductFormProps) => {
                 ]}
                 hasError={!!error}
                 value={value}
-                placeholder="カテゴリを選択して下さい"
+                placeholder='カテゴリを選択して下さい'
                 onChange={(v) => onChange(v?.value)}
               />
             )}
           />
           {errors.category && (
-            <Text color="danger" variant="small" paddingLeft={1}>
+            <Text color='danger' variant='small' paddingLeft={1}>
               カテゴリの選択は必須です
             </Text>
           )}
         </Box>
         <Box marginBottom={1}>
-          <Text as="label" variant="medium">
+          <Text as='label' variant='medium'>
             商品の状態
           </Text>
           {/* 商品の状態のドロップダウン */}
           <Controller
             control={control}
-            name="condition"
+            name='condition'
             rules={{ required: true }}
-            defaultValue="used"
+            defaultValue='used'
             render={({ field: { onChange, value }, fieldState: { error } }) => (
               <Dropdown
                 options={[
@@ -165,37 +165,37 @@ const ProductForm = ({ onProductSave }: ProductFormProps) => {
                 ]}
                 hasError={!!error}
                 value={value ?? 'used'}
-                placeholder="Please select condition"
+                placeholder='Please select condition'
                 onChange={(v) => onChange(v?.value)}
               />
             )}
           />
           {errors.condition && (
-            <Text color="danger" variant="small" paddingLeft={1}>
+            <Text color='danger' variant='small' paddingLeft={1}>
               商品の状態の入力は必須です
             </Text>
           )}
         </Box>
         <Box>
-          <Text as="label" variant="medium">
+          <Text as='label' variant='medium'>
             価格 (円)
           </Text>
           {/* 価格の入力 */}
           <Input
             {...register('price', { required: true })}
-            name="price"
-            type="number"
-            placeholder="100"
+            name='price'
+            type='number'
+            placeholder='100'
             hasError={!!errors.price}
           />
           {errors.price && (
-            <Text color="danger" variant="small" paddingLeft={1}>
+            <Text color='danger' variant='small' paddingLeft={1}>
               価格の入力は必須です
             </Text>
           )}
         </Box>
       </Box>
-      <Button width="100%" type="submit">
+      <Button width='100%' type='submit'>
         出品
       </Button>
     </form>

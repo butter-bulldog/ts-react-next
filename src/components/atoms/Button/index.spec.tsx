@@ -8,7 +8,7 @@ describe('Button', () => {
   beforeEach(() => {
     handleClick = jest.fn()
     renderResult = render(
-      <Button variant="primary" onClick={handleClick}>
+      <Button variant='primary' onClick={handleClick}>
         Button
       </Button>,
     )

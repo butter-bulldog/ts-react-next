@@ -93,9 +93,9 @@ const Template: ComponentStory<typeof Dropzone> = (args) => {
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={URL.createObjectURL(f)}
-            width="100px"
+            width='100px'
             key={i}
-            alt="sample"
+            alt='sample'
           />
         ))}
       </Box>

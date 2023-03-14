@@ -60,18 +60,18 @@ const ProductPage: NextPage<ProductPageProps> = ({
         paddingBottom={2}
         paddingLeft={{ base: 2, md: 0 }}
         paddingRight={{ base: 2, md: 0 }}
-        justifyContent="center"
+        justifyContent='center'
         flexDirection={{ base: 'column', md: 'row' }}
       >
         <Box>
           <Breadcrumb>
             <BreadcrumbItem>
-              <Link href="/">
+              <Link href='/'>
                 <a>トップ</a>
               </Link>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <Link href="/search">
+              <Link href='/search'>
                 <a>検索</a>
               </Link>
             </BreadcrumbItem>
@@ -82,9 +82,9 @@ const ProductPage: NextPage<ProductPageProps> = ({
             </BreadcrumbItem>
             <BreadcrumbItem>{product.title}</BreadcrumbItem>
           </Breadcrumb>
-          <Flex paddingTop={2} paddingBottom={1} justifyContent="center">
+          <Flex paddingTop={2} paddingBottom={1} justifyContent='center'>
             <ProductCard
-              variant="detail"
+              variant='detail'
               title={product.title}
               price={product.price}
               imageUrl={product.imageUrl}
@@ -92,14 +92,14 @@ const ProductPage: NextPage<ProductPageProps> = ({
           </Flex>
           <Separator />
           <Box paddingTop={1}>
-            <Text as="h2" variant="large" marginTop={0}>
+            <Text as='h2' variant='large' marginTop={0}>
               出品者
             </Text>
             <Link href={`/users/${product.owner.id}`}>
               <a>
                 {/* ユーザープロファイル */}
                 <UserProfile
-                  variant="small"
+                  variant='small'
                   username={product.owner.username}
                   profileImageUrl={product.owner.profileImageUrl}
                   numberOfProducts={100}
@@ -110,8 +110,8 @@ const ProductPage: NextPage<ProductPageProps> = ({
         </Box>
         <Box padding={2} width={{ base: '100%', md: '700px' }}>
           <Flex
-            justifyContent="space-between"
-            flexDirection="column"
+            justifyContent='space-between'
+            flexDirection='column'
             height={{ base: '', md: '100%' }}
           >
             {/* 商品概要を表示、改行ごとにテキストコンポーネントでラップ */}
@@ -119,7 +119,7 @@ const ProductPage: NextPage<ProductPageProps> = ({
               {product.description
                 .split('\n')
                 .map((text: string, i: number) => (
-                  <Text key={i} as="p">
+                  <Text key={i} as='p'>
                     {text}
                   </Text>
                 ))}

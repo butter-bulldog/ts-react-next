@@ -69,12 +69,12 @@ const SearchPage: NextPage = () => {
         <Box marginBottom={1}>
           <Breadcrumb>
             <BreadcrumbItem>
-              <Link href="/">
+              <Link href='/'>
                 <a>トップ</a>
               </Link>
             </BreadcrumbItem>
             <BreadcrumbItem>
-              <Link href="/search">
+              <Link href='/search'>
                 <a>検索</a>
               </Link>
             </BreadcrumbItem>
@@ -96,10 +96,10 @@ const SearchPage: NextPage = () => {
         </Box>
         <Flex>
           <Flex flexDirection={{ base: 'column', md: 'row' }}>
-            <Box as="aside" minWidth="200px" marginBottom={{ base: 2, md: 0 }}>
+            <Box as='aside' minWidth='200px' marginBottom={{ base: 2, md: 0 }}>
               {/* 商品の状態のフィルタ */}
               <FilterGroup
-                title="商品の状態"
+                title='商品の状態'
                 items={[
                   { label: '新品', name: 'new' },
                   { label: '中古', name: 'used' },
@@ -108,12 +108,12 @@ const SearchPage: NextPage = () => {
                 onChange={handleChange}
               />
               <Box paddingTop={1}>
-                <Text as="h2" fontWeight="bold" variant="mediumLarge">
+                <Text as='h2' fontWeight='bold' variant='mediumLarge'>
                   カテゴリ
                 </Text>
                 <Box>
-                  <Link href="/search/" passHref>
-                    <Anchor as="a">すべて</Anchor>
+                  <Link href='/search/' passHref>
+                    <Anchor as='a'>すべて</Anchor>
                   </Link>
                 </Box>
                 {/* カテゴリのリンク */}
@@ -121,7 +121,7 @@ const SearchPage: NextPage = () => {
                   (category: string, i: number) => (
                     <Box key={i} marginTop={1}>
                       <Link href={`/search/${category}`} passHref>
-                        <Anchor as="a">
+                        <Anchor as='a'>
                           {categoryNameDict[category as Category]}
                         </Anchor>
                       </Link>
@@ -132,10 +132,10 @@ const SearchPage: NextPage = () => {
             </Box>
             <Box>
               <Text
-                as="h2"
+                as='h2'
                 display={{ base: 'block', md: 'none' }}
-                fontWeight="bold"
-                variant="mediumLarge"
+                fontWeight='bold'
+                variant='mediumLarge'
               >
                 商品一覧
               </Text>

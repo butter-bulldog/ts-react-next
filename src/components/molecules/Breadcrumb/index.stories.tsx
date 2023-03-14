@@ -9,10 +9,10 @@ export default { title: 'Molecules/Breadcrumb' } as ComponentMeta<
 export const Standard = () => (
   <Breadcrumb>
     <BreadcrumbItem>
-      <a href="#">Top</a>
+      <a href='#'>Top</a>
     </BreadcrumbItem>
     <BreadcrumbItem>
-      <a href="#">Clothes</a>
+      <a href='#'>Clothes</a>
     </BreadcrumbItem>
     <BreadcrumbItem>Item</BreadcrumbItem>
   </Breadcrumb>

@@ -39,13 +39,13 @@ const UserPage: NextPage<UserPageProps> = ({
         paddingBottom={2}
         paddingLeft={{ base: 2, md: 0 }}
         paddingRight={{ base: 2, md: 0 }}
-        justifyContent="center"
+        justifyContent='center'
       >
-        <Box width="1180px">
+        <Box width='1180px'>
           <Box marginBottom={2}>
             <Breadcrumb>
               <BreadcrumbItem>
-                <Link href="/">
+                <Link href='/'>
                   <a>トップ</a>
                 </Link>
               </BreadcrumbItem>
